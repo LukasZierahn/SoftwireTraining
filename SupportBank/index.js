@@ -105,14 +105,34 @@ while (!input.match("exit")) {
 
         console.log("Successfully imported: " + name);
 
-    } else if (input.indexOf("Export File ") != -1) {
-        name = input.replace("Export File ", "");
+    } else if (input.indexOf("export file ") != -1) {
+        name = input.replace("export file ", "");
 
-        output = "Date,From,To,Narrative,Amount\n";
+        output = ""
 
-        for (const [key, value] of Object.entries(people)) {
-            output += value.getTransactionCSVString();
-        }    
+        if (name.indexOf(".csv") != -1) {
+            output = "Date,From,To,Narrative,Amount\n";
+
+            for (const [key, value] of Object.entries(people)) {
+                output += value.getTransactionOutputString("csv");
+            }    
+        } else if (name.indexOf(".json") != -1) {
+            for (const [key, value] of Object.entries(people)) {
+                output += value.getTransactionOutputString("json");
+            }    
+        } else if (name.indexOf(".xml") != -1) {
+            output = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<TransactionList>";
+
+            for (const [key, value] of Object.entries(people)) {
+                output += value.getTransactionOutputString("xml");
+            }    
+
+            output += "</TransactionList>\n";
+
+        }
+        else {
+            console.log("File type not supported");
+        }
         
         fs.writeFileSync(name, output, function(err) {
             if(err) {

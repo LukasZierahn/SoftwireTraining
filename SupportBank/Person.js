@@ -1,5 +1,4 @@
 const { SpaceManager } = require("./SpaceManager");
-const { nameSpaces } = require("./index");
 
 
 class Person {
@@ -33,12 +32,19 @@ class Person {
             trans.Print(this);
         });
     }
-    getTransactionCSVString() {
+
+    getTransactionOutputString(mode) {
         output = "";
         this.transactions.forEach((trans, index) => {
             if (trans.from.match(this.name)) {
-                output += trans.getCSVString();
-            }
+                if (mode.match("csv")) {
+                    output += trans.getCSVString();
+                } else if (mode.match("json")) {
+                    output += trans.getJSONString();
+                } else if (mode.match("xml")) {
+                    output += trans.getXMLString();
+                }
+            }   
         });
         return output;
     }

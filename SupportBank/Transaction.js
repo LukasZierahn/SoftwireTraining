@@ -45,5 +45,31 @@ class Transaction {
     getCSVString() {
         return `${this.date.format('DD MM YYYY')},${this.from},${this.to},${this.balance},${this.narrative}\n`;
     }
+
+    getJSONString() {
+        output = `{\n`;
+        output += `\t\"Date\":${this.date.format('DD MM YYYY')},\n`;
+        output += `\t\"FromAccount\": ${this.from},\n`;
+        output += `\t\"ToAccount\": ${this.to},\n`;
+        output += `\t\"Narrative\": ${this.narrative},\n`;
+        output += `\t\"Amount\": ${this.balance}\n`;
+        output += `},\n`;
+        return output;
+    }
+
+    getXMLString() {
+        var days = this.date.diff(moment('1900-01-01'), 'days');
+
+        output =  `\t<SupportTransaction Date="${days}">\n`;
+        output += `\t\t<Description>${this.narrative}</Description>\n`;
+        output += `\t\t<Value>${this.balance}</Value>\n`;
+        output += `\t\t<Parties>\n`;
+        output += `\t\t\t<From>${this.from}</From>\n`;
+        output += `\t\t\t<To>${this.to}</To>\n`;
+        output += `\t\t</Parties>\n`;
+        output += `\t</SupportTransaction>\n`;
+
+      return output;
+    }
 }
 exports.Transaction = Transaction;
