@@ -242,8 +242,6 @@ while (!input.match("exit")) {
         for (const [key, value] of Object.entries(people)) {
             output += value.getTransactionCSVString();
         }    
-
-        console.log(output);
         
         fs.writeFileSync(name, output, function(err) {
             if(err) {
