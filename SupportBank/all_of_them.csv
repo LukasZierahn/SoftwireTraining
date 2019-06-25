@@ -1,0 +1,444 @@
+Date,From,To,Narrative,Amount
+25 06 2019 ,Gergana I,Jon A,9.22,Snooker Night
+25 06 2019 ,Gergana I,Rob S,3.67,Lunch
+25 06 2019 ,Gergana I,Chris W,9.01,Arcade Social
+25 06 2019 ,Gergana I,Rob S,6.33,Lego Assistance
+25 06 2019 ,Gergana I,Laura B,1.9,Snooker Night
+25 06 2019 ,Gergana I,Jon A,0.8,Git-Fu Rendered
+25 06 2019 ,Gergana I,Ben B,9.17,Coffee
+25 06 2019 ,Gergana I,Tim L,10.73,Arcade Social
+25 06 2019 ,Gergana I,Chris W,9.29,Coffee
+25 06 2019 ,Gergana I,Sarah T,2.92,Misc Morale
+14 07 2014 ,Gergana I,Sam N,10.92,Coffee
+18 07 2014 ,Gergana I,Stephen S,11.57,Snooker Night
+28 07 2014 ,Gergana I,Chris W,2.33,Pokemon Training
+04 08 2014 ,Gergana I,Ben B,7.81,Coffee
+25 08 2014 ,Gergana I,Stephen S,8.57,Beers
+16 09 2014 ,Gergana I,Rob S,1.28,Golf Bets
+18 10 2014 ,Gergana I,Rob S,5.47,Jenkins Fees
+28 10 2014 ,Gergana I,Dan W,5.04,Misc Morale
+06 12 2014 ,Gergana I,Rob S,5.64,Lego Assistance
+14 12 2014 ,Gergana I,Laura B,4.26,Lunch
+21 12 2014 ,Gergana I,Laura B,6.86,Pokemon Training
+02 03 2013 ,Gergana I,Stephen S,1.73,Audit and Other Financial Services
+20 03 2013 ,Gergana I,Rob S,2.85,Stationary Items
+24 03 2013 ,Gergana I,Stephen S,2.39,Coffee
+11 04 2013 ,Gergana I,Sarah T,3,Lunch
+18 04 2013 ,Gergana I,Ben B,9.07,Lunch
+09 05 2013 ,Gergana I,Tim L,2.27,White Water Rafting
+08 08 2013 ,Gergana I,Stephen S,10.07,Lunch
+13 08 2013 ,Gergana I,Chris W,9.96,Sandcastle Help
+16 08 2013 ,Gergana I,Ben B,10.91,Misc Morale
+31 08 2013 ,Gergana I,Laura B,5.54,Pokemon Training
+08 10 2013 ,Gergana I,Laura B,5.33,Lunch
+22 12 2013 ,Gergana I,Sam N,1.32,Lunch
+25 06 2019 ,Jon A,Sarah T,9.1,Spline Reticulation
+25 06 2019 ,Jon A,Tim L,4.79,Automated Testing Services
+25 06 2019 ,Jon A,Dan W,7.98,Snooker Night
+25 06 2019 ,Jon A,Laura B,1.2,Golf Bets
+25 06 2019 ,Jon A,Rob S,10.01,Lego Assistance
+25 06 2019 ,Jon A,Sam N,5.83,Beers
+25 06 2019 ,Jon A,Chris W,9.47,Coffee
+25 06 2019 ,Jon A,Ben B,3.66,Coffee
+25 06 2019 ,Jon A,Gergana I,9.01,Misc Morale
+25 06 2019 ,Jon A,Tim L,2.99,Lunch
+25 06 2019 ,Jon A,Tim L,7.88,Jenkins Fees
+01 01 2014 ,Jon A,Sarah T,7.8,Pokemon Training
+07 02 2014 ,Jon A,Sam N,1.65,Beers
+23 03 2014 ,Jon A,Sam N,8.49,Lunch
+06 04 2014 ,Jon A,Stephen S,8.91,Beers
+03 05 2014 ,Jon A,Gergana I,10.51,Rails Consultancy
+19 05 2014 ,Jon A,Todd,9.04,Beers
+16 07 2014 ,Jon A,Dan W,11.75,Coffee
+29 07 2014 ,Jon A,Sam N,5.31,Lunch
+18 08 2014 ,Jon A,Tim L,7.22,Lego Assistance
+03 09 2014 ,Jon A,Tim L,8.13,Lunch
+20 09 2014 ,Jon A,Ben B,3.71,Beers
+24 09 2014 ,Jon A,Laura B,5.61,Golf Bets
+30 09 2014 ,Jon A,Dan W,9.26,Sandbox Help
+23 10 2014 ,Jon A,Dan W,2.37,Lunch
+11 11 2014 ,Jon A,Ben B,0.73,Stationary Items
+02 12 2014 ,Jon A,Sam N,11.04,Pokemon Training
+09 12 2014 ,Jon A,Chris W,2.26,Pokemon Training
+01 01 2013 ,Jon A,Gergana I,2.14,Sandbox Help
+27 02 2013 ,Jon A,Chris W,10.58,Rails Consultancy
+12 06 2013 ,Jon A,Ben B,6.75,Sandcastle Help
+07 07 2013 ,Jon A,Rob S,6.69,Lunch
+07 08 2013 ,Jon A,Rob S,10.78,Poker Winnings
+15 11 2013 ,Jon A,Tim L,9.13,Sandbox Help
+02 12 2013 ,Jon A,Todd,10.19,Misc Morale
+28 12 2013 ,Jon A,Chris W,5.99,Beers
+25 06 2019 ,Sam N,Dan W,6.98,Coffee
+25 06 2019 ,Sam N,Rob S,4.67,Pokemon Training
+25 06 2019 ,Sam N,Dan W,9.81,Beers
+25 06 2019 ,Sam N,Chris W,6.06,Audit and Other Financial Services
+25 06 2019 ,Sam N,Todd,5.43,Lunch
+25 06 2019 ,Sam N,Dan W,1.55,Sandbox Help
+25 06 2019 ,Sam N,Jon A,10.25,Beers
+25 06 2019 ,Sam N,Laura B,2.13,Coffee
+25 06 2019 ,Sam N,Sarah T,6.66,Beers
+25 06 2019 ,Sam N,Laura B,2.44,Rails Consultancy
+15 01 2014 ,Sam N,Stephen S,11.63,Spline Reticulation
+20 01 2014 ,Sam N,Stephen S,8.2,Beers
+31 01 2014 ,Sam N,Gergana I,6.29,Services Rendered
+03 03 2014 ,Sam N,Gergana I,8.76,Lunch
+01 04 2014 ,Sam N,Laura B,2.87,Lunch
+24 05 2014 ,Sam N,Tim L,8.8,Sandcastle Help
+06 07 2014 ,Sam N,Jon A,4.37,Beers
+01 08 2014 ,Sam N,Gergana I,2.72,Coffee
+01 09 2014 ,Sam N,Gergana I,9.41,Pokemon Training
+09 11 2014 ,Sam N,Laura B,7.76,Beers
+14 11 2014 ,Sam N,Dan W,0.8,Spline Reticulation
+18 11 2014 ,Sam N,Chris W,6.44,Golf Bets
+04 02 2013 ,Sam N,Sarah T,5.52,Arcade Social
+15 02 2013 ,Sam N,Chris W,1.54,Lunch
+27 08 2013 ,Sam N,Gergana I,5.45,Fantasy Football
+16 09 2013 ,Sam N,Rob S,2.81,Beers
+20 10 2013 ,Sam N,Sarah T,10.6,Lunch
+27 10 2013 ,Sam N,Dan W,6.89,Misc Morale
+01 12 2013 ,Sam N,Sarah T,6.35,Lunch
+25 06 2019 ,Dan W,Todd,11.1,Beers
+25 06 2019 ,Dan W,Tim L,0.63,Lunch
+25 06 2019 ,Dan W,Stephen S,11.84,Misc Morale
+25 06 2019 ,Dan W,Chris W,11.63,Fantasy Football
+25 06 2019 ,Dan W,Todd,7.32,Misc Morale
+25 06 2019 ,Dan W,Stephen S,3.11,Lunch
+25 06 2019 ,Dan W,Jon A,6.57,Misc Morale
+25 06 2019 ,Dan W,Gergana I,0.58,Coffee
+25 06 2019 ,Dan W,Tim L,10.2,Pokemon Training
+25 06 2019 ,Dan W,Sam N,6.22,Beers
+25 06 2019 ,Dan W,Sam N,11.07,Coffee
+25 06 2019 ,Dan W,Rob S,7.08,Coffee
+25 06 2019 ,Dan W,Gergana I,0.92,Lego Assistance
+10 02 2014 ,Dan W,Sam N,0.93,Lunch
+30 03 2014 ,Dan W,Laura B,4.77,Lunch
+20 04 2014 ,Dan W,Gergana I,11.92,Beers
+05 05 2014 ,Dan W,Sarah T,5.06,Stationary Items
+05 06 2014 ,Dan W,Gergana I,5.61,Spline Reticulation
+09 07 2014 ,Dan W,Tim L,5.45,Misc Morale
+11 07 2014 ,Dan W,Sarah T,5.05,Misc Morale
+06 09 2014 ,Dan W,Todd,1.8,Lunch
+19 10 2014 ,Dan W,Sam N,8,Automated Testing Services
+22 10 2014 ,Dan W,Sam N,0.55,Beers
+29 10 2014 ,Dan W,Ben B,5.87,Rails Consultancy
+12 12 2014 ,Dan W,Tim L,4.5,Coffee
+22 12 2014 ,Dan W,Jon A,3.66,Lunch
+22 01 2013 ,Dan W,Rob S,11.12,Sandcastle Help
+06 02 2013 ,Dan W,Rob S,8.07,Snooker Night
+17 03 2013 ,Dan W,Chris W,3.34,Audit and Other Financial Services
+21 06 2013 ,Dan W,Todd,5.43,Lunch
+10 07 2013 ,Dan W,Sarah T,3.88,Lunch
+19 07 2013 ,Dan W,Stephen S,3.21,Arcade Social
+31 07 2013 ,Dan W,Sam N,1.2,Pokemon Training
+05 09 2013 ,Dan W,Tim L,10.58,Lunch
+29 10 2013 ,Dan W,Rob S,9.99,Misc Morale
+25 06 2019 ,Stephen S,Sarah T,10.67,Lunch
+25 06 2019 ,Stephen S,Gergana I,6.1,Stationary Items
+25 06 2019 ,Stephen S,Todd,7.72,Lunch
+25 06 2019 ,Stephen S,Laura B,5.2,Misc Morale
+25 06 2019 ,Stephen S,Gergana I,3.14,Lunch
+25 06 2019 ,Stephen S,Dan W,8.41,Coffee
+25 06 2019 ,Stephen S,Tim L,2.38,Lunch
+25 06 2019 ,Stephen S,Ben B,11.09,Pokemon Training
+25 06 2019 ,Stephen S,Todd,4.8,Lunch
+25 06 2019 ,Stephen S,Tim L,10.86,Pokemon Training
+25 06 2019 ,Stephen S,Jon A,8.55,Coffee
+25 06 2019 ,Stephen S,Sam N,10.41,Lunch
+25 06 2019 ,Stephen S,Chris W,7.89,Jenkins Fees
+25 06 2019 ,Stephen S,Jon A,0.64,Lunch
+25 06 2019 ,Stephen S,Chris W,5.95,Automated Testing Services
+25 06 2019 ,Stephen S,Sarah T,6.07,Lego Assistance
+04 01 2014 ,Stephen S,Tim L,4.37,Lunch
+14 01 2014 ,Stephen S,Ben B,7.36,Beers
+19 01 2014 ,Stephen S,Gergana I,5.88,Beers
+15 02 2014 ,Stephen S,Gergana I,6.91,Rails Consultancy
+01 03 2014 ,Stephen S,Jon A,8.75,Coffee
+08 04 2014 ,Stephen S,Sam N,2.96,Lego Assistance
+23 04 2014 ,Stephen S,Rob S,3.41,Poker Winnings
+11 06 2014 ,Stephen S,Sam N,5.14,Lego Assistance
+16 06 2014 ,Stephen S,Dan W,4.79,Lunch
+23 06 2014 ,Stephen S,Ben B,11.85,Spline Reticulation
+02 07 2014 ,Stephen S,Dan W,2.9,Lego Assistance
+11 08 2014 ,Stephen S,Rob S,8.91,Lunch
+05 01 2013 ,Stephen S,Tim L,10.57,Sandcastle Help
+28 01 2013 ,Stephen S,Ben B,1.92,Services Rendered
+10 02 2013 ,Stephen S,Todd,10.4,Snooker Night
+27 03 2013 ,Stephen S,Dan W,7.82,Jenkins Fees
+05 04 2013 ,Stephen S,Chris W,3.4,Coffee
+25 04 2013 ,Stephen S,Jon A,2.47,Coffee
+26 04 2013 ,Stephen S,Jon A,9.1,Misc Morale
+22 05 2013 ,Stephen S,Sam N,9.24,Pokemon Training
+25 05 2013 ,Stephen S,Chris W,2.85,Sandbox Help
+29 05 2013 ,Stephen S,Ben B,1.51,Audit and Other Financial Services
+23 06 2013 ,Stephen S,Jon A,6.12,Audit and Other Financial Services
+05 07 2013 ,Stephen S,Sam N,6.73,Lunch
+16 07 2013 ,Stephen S,Gergana I,6.95,Coffee
+11 08 2013 ,Stephen S,Chris W,7.27,Lunch
+13 09 2013 ,Stephen S,Laura B,1.96,Services Rendered
+22 09 2013 ,Stephen S,Dan W,9.28,Sandbox Help
+23 09 2013 ,Stephen S,Dan W,5.13,Coffee
+05 11 2013 ,Stephen S,Rob S,8.3,Spline Reticulation
+21 11 2013 ,Stephen S,Chris W,2.53,Misc Morale
+27 12 2013 ,Stephen S,Todd,4.34,Spline Reticulation
+25 06 2019 ,Sarah T,Sam N,1.79,Beers
+25 06 2019 ,Sarah T,Gergana I,1.89,Sandcastle Help
+25 06 2019 ,Sarah T,Dan W,5.49,Lego Assistance
+25 06 2019 ,Sarah T,Laura B,8.24,Snooker Night
+25 06 2019 ,Sarah T,Chris W,5.19,Misc Morale
+25 06 2019 ,Sarah T,Dan W,1.78,Automated Testing Services
+25 06 2019 ,Sarah T,Chris W,3.75,Lego Assistance
+25 06 2019 ,Sarah T,Ben B,7.6,Jenkins Fees
+25 06 2019 ,Sarah T,Stephen S,8.85,White Water Rafting
+25 06 2019 ,Sarah T,Rob S,10.69,Audit and Other Financial Services
+25 06 2019 ,Sarah T,Dan W,7.72,Coffee
+25 06 2019 ,Sarah T,Dan W,8.36,Coffee
+25 06 2019 ,Sarah T,Chris W,4.41,Lunch
+25 06 2019 ,Sarah T,Tim L,5.18,Golf Bets
+25 06 2019 ,Sarah T,Jon A,8.89,Stationary Items
+25 06 2019 ,Sarah T,Laura B,10.28,Lunch
+18 02 2014 ,Sarah T,Sam N,1.6,Spline Reticulation
+14 03 2014 ,Sarah T,Ben B,2.1,Spline Reticulation
+17 03 2014 ,Sarah T,Stephen S,0.66,Beers
+09 06 2014 ,Sarah T,Stephen S,11.5,Lego Assistance
+28 06 2014 ,Sarah T,Gergana I,4.03,Beers
+22 07 2014 ,Sarah T,Ben B,11.56,Coffee
+13 08 2014 ,Sarah T,Todd,8.25,Beers
+27 09 2014 ,Sarah T,Dan W,11.6,Beers
+06 10 2014 ,Sarah T,Tim L,7.44,Spline Reticulation
+02 11 2014 ,Sarah T,Tim L,4.67,Lego Assistance
+30 01 2013 ,Sarah T,Todd,11.95,Jenkins Fees
+31 01 2013 ,Sarah T,Chris W,7.55,Poker Winnings
+18 02 2013 ,Sarah T,Sam N,6.98,Coffee
+26 02 2013 ,Sarah T,Stephen S,5.94,Audit and Other Financial Services
+03 04 2013 ,Sarah T,Stephen S,2.64,Lunch
+05 05 2013 ,Sarah T,Ben B,0.51,Beers
+10 06 2013 ,Sarah T,Gergana I,10.81,Lego Assistance
+23 07 2013 ,Sarah T,Stephen S,11.17,Services Rendered
+22 08 2013 ,Sarah T,Laura B,7.05,Misc Morale
+01 11 2013 ,Sarah T,Laura B,7.01,Lunch
+17 12 2013 ,Sarah T,Ben B,8.72,Pokemon Training
+25 06 2019 ,Rob S,Sarah T,7.19,Misc Morale
+25 06 2019 ,Rob S,Tim L,2.29,Snooker Night
+25 06 2019 ,Rob S,Jon A,6.45,Pokemon Training
+25 06 2019 ,Rob S,Ben B,4.85,Coffee
+25 06 2019 ,Rob S,Sam N,8.6,Automated Testing Services
+25 06 2019 ,Rob S,Todd,10.52,Coffee
+25 06 2019 ,Rob S,Sam N,4.34,Misc Morale
+25 06 2019 ,Rob S,Gergana I,4.73,Sandcastle Help
+25 06 2019 ,Rob S,Ben B,6.63,Git-Fu Rendered
+25 06 2019 ,Rob S,Todd,1.49,Coffee
+25 06 2019 ,Rob S,Chris W,10.98,Automated Testing Services
+11 01 2014 ,Rob S,Ben B,7.8,Misc Morale
+22 03 2014 ,Rob S,Tim L,1.95,Misc Morale
+15 04 2014 ,Rob S,Sam N,8.86,Snooker Night
+17 05 2014 ,Rob S,Sarah T,3.61,Misc Morale
+01 07 2014 ,Rob S,Jon A,2.67,Lunch
+23 07 2014 ,Rob S,Tim L,11.47,Lego Assistance
+07 11 2014 ,Rob S,Ben B,3,Rails Consultancy
+20 12 2014 ,Rob S,Gergana I,1.07,Lunch
+07 02 2013 ,Rob S,Laura B,7.63,Beers
+01 04 2013 ,Rob S,Tim L,4.77,Coffee
+15 04 2013 ,Rob S,Chris W,5.49,Coffee
+05 06 2013 ,Rob S,Dan W,1.96,Golf Bets
+26 06 2013 ,Rob S,Sarah T,8.39,Lunch
+28 08 2013 ,Rob S,Chris W,11.13,Jenkins Fees
+07 09 2013 ,Rob S,Laura B,3.32,Lunch
+09 11 2013 ,Rob S,Tim L,11,Stationary Items
+12 11 2013 ,Rob S,Sam N,1.25,Misc Morale
+18 11 2013 ,Rob S,Dan W,9.4,Services Rendered
+13 12 2013 ,Rob S,Tim L,9.19,Misc Morale
+30 12 2013 ,Rob S,Sam N,2.54,Misc Morale
+25 06 2019 ,Tim L,Chris W,10.73,Fantasy Football
+25 06 2019 ,Tim L,Rob S,10.1,Automated Testing Services
+25 06 2019 ,Tim L,Ben B,2.61,Jenkins Fees
+25 06 2019 ,Tim L,Chris W,11.17,Arcade Social
+25 06 2019 ,Tim L,Ben B,10.73,White Water Rafting
+25 06 2019 ,Tim L,Ben B,9.1,Misc Morale
+25 06 2019 ,Tim L,Todd,3.57,Pokemon Training
+25 06 2019 ,Tim L,Sam N,2.12,Sandbox Help
+25 06 2019 ,Tim L,Sam N,9.11,Services Rendered
+25 06 2019 ,Tim L,Jon A,8.65,Fantasy Football
+25 06 2019 ,Tim L,Stephen S,4.42,Lunch
+25 06 2019 ,Tim L,Sarah T,3.74,Pokemon Training
+25 06 2019 ,Tim L,Dan W,11.93,Coffee
+25 06 2019 ,Tim L,Sarah T,9.31,Coffee
+25 06 2019 ,Tim L,Stephen S,8.73,Spline Reticulation
+25 06 2019 ,Tim L,Jon A,6.28,Coffee
+25 06 2019 ,Tim L,Todd,0.77,Services Rendered
+22 02 2014 ,Tim L,Sam N,5.2,Pokemon Training
+20 03 2014 ,Tim L,Sarah T,2.28,Lego Assistance
+24 04 2014 ,Tim L,Dan W,6.38,Misc Morale
+06 05 2014 ,Tim L,Chris W,7.45,Audit and Other Financial Services
+13 05 2014 ,Tim L,Ben B,5.89,Coffee
+22 05 2014 ,Tim L,Todd,3.81,Coffee
+31 05 2014 ,Tim L,Ben B,8.23,Coffee
+01 06 2014 ,Tim L,Stephen S,5.2,Rails Consultancy
+22 06 2014 ,Tim L,Stephen S,6.44,Coffee
+08 08 2014 ,Tim L,Laura B,3.76,Coffee
+28 11 2014 ,Tim L,Dan W,8.76,Beers
+08 04 2013 ,Tim L,Todd,4.27,Jenkins Fees
+30 06 2013 ,Tim L,Laura B,6.51,Lunch
+01 07 2013 ,Tim L,Jon A,1.48,Misc Morale
+04 07 2013 ,Tim L,Chris W,5.63,Poker Winnings
+19 08 2013 ,Tim L,Sam N,7.51,Coffee
+10 09 2013 ,Tim L,Ben B,8.68,Misc Morale
+12 09 2013 ,Tim L,Laura B,2.53,Lego Assistance
+24 11 2013 ,Tim L,Sam N,7.59,Rails Consultancy
+25 06 2019 ,Chris W,Ben B,10.89,Coffee
+25 06 2019 ,Chris W,Tim L,3.12,Pokemon Training
+25 06 2019 ,Chris W,Rob S,7.32,Spline Reticulation
+25 06 2019 ,Chris W,Stephen S,3.88,Pokemon Training
+25 06 2019 ,Chris W,Rob S,4.3,Lunch
+25 06 2019 ,Chris W,Jon A,10.84,Spline Reticulation
+25 06 2019 ,Chris W,Stephen S,10.78,Sandcastle Help
+25 06 2019 ,Chris W,Laura B,1.92,Misc Morale
+25 06 2019 ,Chris W,Dan W,3.2,Rails Consultancy
+25 06 2019 ,Chris W,Todd,5.38,Beers
+25 06 2019 ,Chris W,Chris W,2.48,Lunch
+25 06 2019 ,Chris W,Chris W,2.48,Lunch
+25 06 2019 ,Chris W,Todd,10.78,Services Rendered
+25 06 2019 ,Chris W,Sarah T,4.53,Git-Fu Rendered
+04 02 2014 ,Chris W,Ben B,6.03,Spline Reticulation
+26 06 2014 ,Chris W,Todd,9.81,Beers
+29 06 2014 ,Chris W,Laura B,8.7,Jenkins Fees
+14 08 2014 ,Chris W,Tim L,6.59,Misc Morale
+22 08 2014 ,Chris W,Sam N,1.9,Golf Bets
+30 10 2014 ,Chris W,Gergana I,8.9,Jenkins Fees
+04 11 2014 ,Chris W,Rob S,6.15,Sandbox Help
+21 11 2014 ,Chris W,Todd,1.42,Lego Assistance
+25 11 2014 ,Chris W,Rob S,5.76,Pokemon Training
+18 12 2014 ,Chris W,Ben B,11.17,Coffee
+04 01 2013 ,Chris W,Dan W,10.53,Coffee
+22 02 2013 ,Chris W,Tim L,8.77,Lunch
+22 03 2013 ,Chris W,Laura B,4.15,Git-Fu Rendered
+08 05 2013 ,Chris W,Tim L,5.94,Coffee
+03 06 2013 ,Chris W,Rob S,2.16,Lunch
+22 06 2013 ,Chris W,Tim L,0.98,Stationary Items
+27 06 2013 ,Chris W,Ben B,10.41,Beers
+13 07 2013 ,Chris W,Tim L,2.08,Misc Morale
+03 09 2013 ,Chris W,Ben B,9.48,Coffee
+27 09 2013 ,Chris W,Sarah T,7.05,Stationary Items
+04 10 2013 ,Chris W,Ben B,5.96,Coffee
+23 10 2013 ,Chris W,Todd,3.42,Lego Assistance
+12 12 2013 ,Chris W,Tim L,11.44,Coffee
+25 06 2019 ,Todd,Ben B,8.46,Sandcastle Help
+25 06 2019 ,Todd,Dan W,8.44,Audit and Other Financial Services
+25 06 2019 ,Todd,Sam N,11.4,Pokemon Training
+25 06 2019 ,Todd,Chris W,10.88,Fantasy Football
+25 06 2019 ,Todd,Stephen S,4.15,Misc Morale
+25 06 2019 ,Todd,Dan W,11.59,Jenkins Fees
+25 06 2019 ,Todd,Tim L,8.57,Automated Testing Services
+25 06 2019 ,Todd,Sam N,3.57,Snooker Night
+25 06 2019 ,Todd,Tim L,10.89,Git-Fu Rendered
+25 06 2019 ,Todd,Chris W,11.83,Golf Bets
+25 06 2019 ,Todd,Dan W,4.34,Beers
+25 06 2019 ,Todd,Ben B,10.4,Sandcastle Help
+28 01 2014 ,Todd,Ben B,6.81,Coffee
+01 02 2014 ,Todd,Ben B,6.87,Snooker Night
+05 02 2014 ,Todd,Rob S,5.62,Sandbox Help
+25 02 2014 ,Todd,Rob S,7.1,Automated Testing Services
+07 03 2014 ,Todd,Laura B,9.39,Pokemon Training
+10 03 2014 ,Todd,Gergana I,1.62,Sandbox Help
+29 03 2014 ,Todd,Sarah T,5.01,Git-Fu Rendered
+04 04 2014 ,Todd,Ben B,10.85,Rails Consultancy
+10 04 2014 ,Todd,Sarah T,3.55,Snooker Night
+11 04 2014 ,Todd,Laura B,3.72,Coffee
+26 04 2014 ,Todd,Tim L,1.46,Lunch
+14 06 2014 ,Todd,Sam N,6.3,Lego Assistance
+09 09 2014 ,Todd,Dan W,3.93,Audit and Other Financial Services
+23 11 2014 ,Todd,Sarah T,2.24,Beers
+16 12 2014 ,Todd,Tim L,7.17,Poker Winnings
+25 12 2014 ,Todd,Rob S,1.86,Lego Assistance
+09 01 2013 ,Todd,Rob S,8.19,Coffee
+13 01 2013 ,Todd,Sarah T,1.01,Coffee
+15 01 2013 ,Todd,Laura B,2.71,Golf Bets
+12 03 2013 ,Todd,Jon A,0.9,Automated Testing Services
+14 03 2013 ,Todd,Chris W,8.97,Rails Consultancy
+09 04 2013 ,Todd,Gergana I,2.6,Misc Morale
+21 04 2013 ,Todd,Sarah T,5.32,Sandcastle Help
+06 05 2013 ,Todd,Dan W,4.92,Git-Fu Rendered
+13 05 2013 ,Todd,Ben B,11.07,Coffee
+02 06 2013 ,Todd,Ben B,11.83,Golf Bets
+06 06 2013 ,Todd,Jon A,1.06,Pokemon Training
+23 08 2013 ,Todd,Sam N,0.6,Beers
+26 08 2013 ,Todd,Rob S,3.85,Lunch
+01 10 2013 ,Todd,Tim L,10.13,Coffee
+11 10 2013 ,Todd,Rob S,10.62,Lunch
+19 12 2013 ,Todd,Ben B,8.72,Pokemon Training
+25 06 2019 ,Ben B,Chris W,11.72,Coffee
+25 06 2019 ,Ben B,Chris W,1.45,Golf Bets
+25 06 2019 ,Ben B,Chris W,1.33,Services Rendered
+25 06 2019 ,Ben B,Laura B,10.6,Audit and Other Financial Services
+25 06 2019 ,Ben B,Todd,7.83,Coffee
+27 02 2014 ,Ben B,Rob S,8.41,Snooker Night
+27 03 2014 ,Ben B,Sam N,10.76,Misc Morale
+09 04 2014 ,Ben B,Rob S,1.31,Coffee
+19 04 2014 ,Ben B,Gergana I,7.61,Lunch
+26 05 2014 ,Ben B,Laura B,7.36,Lunch
+20 06 2014 ,Ben B,Chris W,1.34,Rails Consultancy
+21 08 2014 ,Ben B,Gergana I,9.25,Rails Consultancy
+23 08 2014 ,Ben B,Stephen S,5.02,Lunch
+29 08 2014 ,Ben B,Chris W,1.66,Lunch
+29 09 2014 ,Ben B,Tim L,3.43,Misc Morale
+04 10 2014 ,Ben B,Todd,11.28,Lunch
+10 10 2014 ,Ben B,Gergana I,3.98,Beers
+14 10 2014 ,Ben B,Gergana I,11.65,Coffee
+28 12 2014 ,Ben B,Laura B,1.44,Coffee
+29 12 2014 ,Ben B,Sam N,5.26,Coffee
+25 01 2013 ,Ben B,Jon A,4.86,Coffee
+12 02 2013 ,Ben B,Chris W,5.76,Misc Morale
+08 03 2013 ,Ben B,Sarah T,6.2,Pokemon Training
+28 03 2013 ,Ben B,Stephen S,6.36,Sandbox Help
+24 04 2013 ,Ben B,Tim L,1.15,Fantasy Football
+27 04 2013 ,Ben B,Chris W,9.91,Rails Consultancy
+01 05 2013 ,Ben B,Dan W,9.85,Git-Fu Rendered
+14 05 2013 ,Ben B,Dan W,9.96,Rails Consultancy
+13 06 2013 ,Ben B,Sarah T,5.15,Poker Winnings
+16 06 2013 ,Ben B,Dan W,9.24,Misc Morale
+27 07 2013 ,Ben B,Tim L,4.29,Coffee
+30 07 2013 ,Ben B,Todd,0.69,Beers
+01 08 2013 ,Ben B,Todd,11.18,Lunch
+19 09 2013 ,Ben B,Gergana I,5.52,Beers
+12 10 2013 ,Ben B,Chris W,7.78,Jenkins Fees
+07 11 2013 ,Ben B,Sarah T,10.09,Lunch
+28 11 2013 ,Ben B,Todd,2.15,Golf Bets
+29 11 2013 ,Ben B,Sam N,4.01,Pokemon Training
+05 12 2013 ,Ben B,Sam N,9,Coffee
+24 12 2013 ,Ben B,Rob S,10.14,Snooker Night
+25 06 2019 ,Laura B,Todd,10.36,Lunch
+25 06 2019 ,Laura B,Dan W,3.8,Stationary Items
+25 06 2019 ,Laura B,Dan W,10.46,Lunch
+25 06 2019 ,Laura B,Rob S,11.7,Beers
+25 06 2019 ,Laura B,Sam N,0.93,Fantasy Football
+25 06 2019 ,Laura B,Ben B,8.17,Jenkins Fees
+25 06 2019 ,Laura B,Jon A,3.51,Coffee
+25 06 2019 ,Laura B,Chris W,9.43,Stationary Items
+25 06 2019 ,Laura B,Sam N,8.71,Lunch
+25 06 2019 ,Laura B,Jon A,0.52,Poker Winnings
+25 06 2019 ,Laura B,Rob S,7.73,Git-Fu Rendered
+25 06 2019 ,Laura B,Dan W,1.74,Snooker Night
+25 06 2019 ,Laura B,Stephen S,11.22,Misc Morale
+25 06 2019 ,Laura B,Todd,10.25,Lunch
+25 06 2019 ,Laura B,Dan W,10.62,Lunch
+08 01 2014 ,Laura B,Stephen S,5.09,Lunch
+24 01 2014 ,Laura B,Sam N,11.68,Coffee
+14 02 2014 ,Laura B,Stephen S,10.78,Snooker Night
+30 04 2014 ,Laura B,Ben B,5.77,Golf Bets
+10 05 2014 ,Laura B,Todd,10.63,Lego Assistance
+30 05 2014 ,Laura B,Todd,7.01,Lunch
+25 07 2014 ,Laura B,Stephen S,9.42,Poker Winnings
+03 08 2014 ,Laura B,Rob S,6.26,Rails Consultancy
+24 08 2014 ,Laura B,Stephen S,7.45,Audit and Other Financial Services
+28 08 2014 ,Laura B,Tim L,0.57,Beers
+12 09 2014 ,Laura B,Jon A,3.11,Git-Fu Rendered
+25 10 2014 ,Laura B,Todd,8.42,Beers
+19 11 2014 ,Laura B,Jon A,2.61,Coffee
+18 01 2013 ,Laura B,Tim L,7.17,Jenkins Fees
+06 03 2013 ,Laura B,Sam N,7.26,Stationary Items
+04 05 2013 ,Laura B,Dan W,1.34,Coffee
+18 05 2013 ,Laura B,Sarah T,11.94,Lunch
+19 06 2013 ,Laura B,Jon A,3.68,Coffee
+05 08 2013 ,Laura B,Tim L,11.34,Jenkins Fees
+16 10 2013 ,Laura B,Rob S,5.71,Arcade Social
+17 10 2013 ,Laura B,Jon A,7.71,Arcade Social
+09 12 2013 ,Laura B,Tim L,9.39,Rails Consultancy
