@@ -1,11 +1,82 @@
-const rules = {
-    "Fizz" : true,
-    "Buzz" : true,
-    "Bang" : true,
-    "Bong" : true,
-    "Fezz" : true,
-    "Reverse" : true,
-}
+const rules = [];
+
+rules.push({
+    name : "Fizz",
+    enabled : true,
+    condition : function(i) {
+        return i % 3 == 0;
+    },
+    apply : function(input) {
+        return input + "Fizz";
+    }
+})
+
+rules.push({
+    name : "Buzz",
+    enabled : true,
+    condition : function(i) {
+        return i % 5 == 0;
+    },
+    apply : function(input) {
+        return input += "Buzz";
+    }
+})
+
+rules.push({
+    name : "Bang",
+    enabled : true,
+    condition : function(i) {
+        return i % 7 == 0;
+    },
+    apply : function(input) {
+        return input + "Bang";
+    }
+})
+
+rules.push({
+    name : "Bong",
+    enabled : true,
+    condition : function(i) {
+        return i % 11 == 0;
+    },
+    apply : function(input) {
+        return "Bong";
+    }
+})
+
+rules.push({
+    name : "Fezz",
+    enabled : true,
+    condition : function(i) {
+        return i % 13 == 0;
+    },
+    apply : function(input) {
+        split = input.replace("B", ".B").split(".");
+        if (split.length == 1) {
+            return split.join("") + "Fezz";
+        } else {
+            split[1] = "Fezz" + split[1];
+            return split.join("");
+        }
+    }
+})
+
+rules.push({
+    name : "Fezz",
+    enabled : true,
+    condition : function(i) {
+        return i % 17 == 0;
+    },
+    apply : function(input) {
+        buffer = "";
+        //Note that output.length is always divisable by four
+        for (var j = 0; j < input.length / 4; j++) {
+            buffer += input.substring(4 * ((input.length / 4) - j - 1), 4 * (input.length / 4) - j);
+        }
+        return buffer;
+
+    }
+})
 
 const readline = require('readline').createInterface({
     input: process.stdin,
@@ -17,67 +88,57 @@ function main(targetNr) {
 
         output = "";
 
-        if (i % 3 == 0 && rules.Fizz) {
-            output += "Fizz";
-        }        
-        if (i % 5 == 0 && rules.Buzz) {
-            output += "Buzz";
-        }
-
-        if (i % 7 == 0 && rules.Bang) {
-            output += "Bang";
-        }
-
-        if (i % 11 == 0 && rules.Bong) {
-            output = "Bong";
-        }
-
-        if (i % 13 == 0 && rules.Fezz) {
-            split = output.replace("B", ".B").split(".");
-            if (split.length == 1) {
-                output = split.join("") + "Fezz";
-            } else {
-                split[1] = "Fezz" + split[1];
-                output = split.join("");
+        rules.forEach(function(rule, index) {
+            if (rule.enabled && rule.condition(i)) {
+                output = rule.apply(output);
             }
-        }
-
-        if (i % 17 == 0 && rules.Reverse) {
-            buffer = "";
-            //Note that output.length is always divisable by four
-            for (var j = 0; j < output.length / 4; j++) {
-                buffer += output.substring(4 * ((output.length / 4) - j - 1), 4 * (output.length / 4) - j);
-            }
-            output = buffer;
-        }
+        })
 
         output ? console.log(output) : console.log(i);
     }
 }
 
-function HandleUserInput() {
-    readline.question("Please enter target number or rule to Enable/Disable: ", (input) => {
+function addRule(resolve) {
+    newRule = [];
+    readline.question("Enter Rule Parameters: ", (ruleInput) => {
+        ruleInput = ruleInput.split("#");
+        newRule.name = ruleInput[0];
+        //console.log("function(i) { return " + ruleInput[1] + ";}");
+        //console.log("function(input) {" + ruleInput[2] + "}");
+        eval("newRule.condition = function(i) { return " + ruleInput[1] + ";}");
+        eval("newRule.apply = function(input) {" + ruleInput[2] + "}");
+        newRule.enabled = true;
+        rules.push(newRule);
+        resolve();
+    })
+}
 
+async function HandleUserInput() {
+
+    readline.question("Please enter target number or rule to Enable/Disable: ", async(input) => {
         targetNr = parseInt(input);
 
         if (!isNaN(targetNr)) {
             main(targetNr)
             console.log("\n");
+        } else if (input.match("add")) {
+            promise = new Promise((resolve, reject) => { 
+                addRule(resolve);
+            });
+            await promise;
         } else {
-            if (input in rules) {
-                rules[input] = !rules[input];
-                output = "";
-
-                rules[input] ? console.log("Enabled " + input) : console.log("Disabled " + input);
-            } else if (!input.match("exit")) {
-                console.log("Could not interprete your input!");
-            }
+            rules.forEach(function(rule, index) {
+                if (rule.name.match(input)) {
+                    rule.enabled = !rule.enabled;
+                    rule.enabled ? console.log("Enabled " + input) : console.log("Disabled " + input);
+                }
+            })
         }
 
-        if (!input.match("exit")) {
-            HandleUserInput();
-        } else {
+        if (input.match("exit") || input.match("q")) {
             process.exit()
+        } else {
+            HandleUserInput();
         }
     })
 }
