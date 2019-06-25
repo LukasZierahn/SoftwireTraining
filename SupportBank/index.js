@@ -1,3 +1,19 @@
+const log4js = require('log4js');
+
+log4js.configure({
+    appenders: {
+        file: { type: 'fileSync', filename: 'logs/debug.log' }
+    },
+    categories: {
+        default: { appenders: ['file'], level: 'debug'}
+    }
+});
+
+const logger = log4js.getLogger('SupportBank');
+const fs = require("fs");
+const moment = require('moment');
+const readlineSync = require('readline-sync');
+
 class Person {
     constructor(name, balance) {
         this.name = name;
@@ -28,6 +44,7 @@ class Person {
     }
 
     printTransactions() {
+        this.balance = Math.round(this.balance*100)/100;
         console.log(this.name + " " + this.balance);
 
         this.transactions.forEach((trans, index) => {
@@ -37,12 +54,22 @@ class Person {
 }
 
 class Transaction {
-    constructor(from, to, narrative, balance, date){
+    constructor(from, to, narrative, balance, date, line){
         this.from = from;
         this.to = to;
         this.narrative = narrative;
         this.balance = Math.round(balance*100)/100;
         this.date = date;
+
+        if (isNaN(this.balance)) {
+            logger.error(`Invalid balance in line ${line}`);
+            this.balance = 0;
+        }
+
+        if (!date.isValid()) {
+            logger.error(`Invalid date in line ${line}`);
+            this.date = moment("2014-01-01");
+        }
     }
 
     print(person) {
@@ -97,15 +124,12 @@ function ListAll() {
       }
 }
 
-const fs = require("fs");
-const moment = require('moment');
-const readlineSync = require('readline-sync');
-
 const nameSpaces = new SpaceManager();
 
 people = {};
 
-text = fs.readFileSync("./Transactions2014.csv", "utf8");
+//text = fs.readFileSync("./Transactions2014.csv", "utf8");
+text = fs.readFileSync("./DodgyTransactions2015.csv", "utf8");
 text.split("\n").forEach((line, index) => {
     if (index == 0) {
         return;
@@ -124,10 +148,14 @@ text.split("\n").forEach((line, index) => {
         nameSpaces.CheckForLongestValue(input[2]);
     }
 
-    newTrans = new Transaction(input[1], input[2], input[3], parseFloat(input[4]), moment(input[0], "DD-MM-YYYY"));
+    newTrans = new Transaction(input[1], input[2], input[3], parseFloat(input[4]), moment(input[0], "DD-MM-YYYY"), index);
     people[input[1]].addTransaction(newTrans);
     people[input[2]].addTransaction(newTrans);
 })
+
+for (const [key, value] of Object.entries(people)) {
+    value.printTransactions();
+}
 
 input = ""
 while (!input.match("exit")) {
