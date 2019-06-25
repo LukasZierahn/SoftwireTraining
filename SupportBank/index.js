@@ -13,6 +13,7 @@ const logger = log4js.getLogger('SupportBank');
 const fs = require("fs");
 const moment = require('moment');
 const readlineSync = require('readline-sync');
+const xml2js = require('xml2js');
 
 class Person {
     constructor(name, balance) {
@@ -33,7 +34,7 @@ class Person {
         trans.from.match(this.name) ? this.balance -= trans.balance : this.balance += trans.balance;
     }
 
-    print() {
+    Print() {
         this.balance = Math.round(this.balance*100)/100;
 
         var spaces = "";
@@ -43,18 +44,30 @@ class Person {
         console.log(this.name + spaces + this.balance);
     }
 
-    printTransactions() {
+    PrintTransactions() {
         this.balance = Math.round(this.balance*100)/100;
         console.log(this.name + " " + this.balance);
 
         this.transactions.forEach((trans, index) => {
-            trans.print(this);
+            trans.Print(this);
         })
+    }
+
+    getTransactionCSVString() {
+        output = "";
+
+        this.transactions.forEach((trans, index) => {
+            if (trans.from.match(this.name)) {
+                output += trans.getCSVString();
+            }
+        })
+
+        return output;
     }
 }
 
 class Transaction {
-    constructor(from, to, narrative, balance, date, line){
+    constructor(from, to, narrative, balance, date, logPosition){
         this.from = from;
         this.to = to;
         this.narrative = narrative;
@@ -62,17 +75,17 @@ class Transaction {
         this.date = date;
 
         if (isNaN(this.balance)) {
-            logger.error(`Invalid balance in line ${line}`);
+            logger.error(`Invalid balance, ${logPosition}`);
             this.balance = 0;
         }
 
         if (!date.isValid()) {
-            logger.error(`Invalid date in line ${line}`);
+            logger.error(`Invalid date, ${logPosition}`);
             this.date = moment("2014-01-01");
         }
     }
 
-    print(person) {
+    Print(person) {
         if (person == null || person == undefined) {
             console.log(`${this.date} ${this.from} ${this.to} ${this.balance} ${this.narrative}`);
         } else {
@@ -95,6 +108,10 @@ class Transaction {
                 this.balance + balanceSpace + 
                 this.narrative + person.narrativeSpaces.GetSpaces(this.narrative, 2));
         }
+    }
+
+    getCSVString() {
+        return `${this.date.format('DD MM YYYY ')},${this.from},${this.to},${this.balance},${this.narrative}\n`
     }
 }
 
@@ -120,54 +137,123 @@ class SpaceManager {
 
 function ListAll() {
     for (const [key, value] of Object.entries(people)) {
-        value.print();
-      }
+        value.Print();
+    }
 }
+
+function ListAllWithTransactions() {
+    for (const [key, value] of Object.entries(people)) {
+        value.PrintTransactions();
+    }
+}
+
+function AddData(date, from, to, narrative, balance, logPosition) {
+    if (!(from in people)) {
+        people[from] = new Person(from, 0);
+        nameSpaces.CheckForLongestValue(from);
+    }
+
+    if (!(to in people)) {
+        people[to] = new Person(to, 0);
+        nameSpaces.CheckForLongestValue(to);
+    }
+
+    //moment(input[0], "DD-MM-YYYY")
+    newTrans = new Transaction(from, to, narrative, balance, date, logPosition);
+    people[from].addTransaction(newTrans);
+    people[to].addTransaction(newTrans);
+}
+
+function ParseCSV(inp) {
+    inp.split("\n").forEach((line, index) => {
+        if (index == 0) {
+            return;
+        }
+    
+        CSVinput = line.split(",");
+
+        AddData(moment(CSVinput[0], "DD-MM-YYYY"), CSVinput[1], CSVinput[2], CSVinput[3], parseFloat(CSVinput[4]), "in line" + (index + 1) + "/" + name);
+    })
+}
+
+function ParseJSON(inp) {
+    JSON.parse(inp).forEach((value, index) => {
+        AddData(moment(value.Date), value.FromAccount, value.ToAccount, value.Narrative, value.Amount, "Object Nr: " + (index + 1) + "/" + name); 
+    });
+}
+
+function ParseXML(inp) {
+    var parser = new xml2js.Parser();
+    parser.parseString(text, function (err, result) {
+        result.TransactionList.SupportTransaction.forEach((value, index) => {
+            AddData(moment(value.Date), value.Parties[0].From[0], value.Parties[0].To[0], value.Description, value.Value, "Object Nr: " + (index + 1) + "/" + name);
+        });
+    });
+}
+
 
 const nameSpaces = new SpaceManager();
 
 people = {};
 
 //text = fs.readFileSync("./Transactions2014.csv", "utf8");
-text = fs.readFileSync("./DodgyTransactions2015.csv", "utf8");
-text.split("\n").forEach((line, index) => {
-    if (index == 0) {
-        return;
-    }
-
-    input = line.split(",");
-    found = false;
-
-    if (!(input[1] in people)) {
-        people[input[1]] = new Person(input[1], 0);
-        nameSpaces.CheckForLongestValue(input[1]);
-    }
-
-    if (!(input[2] in people)) {
-        people[input[2]] = new Person(input[2], 0);
-        nameSpaces.CheckForLongestValue(input[2]);
-    }
-
-    newTrans = new Transaction(input[1], input[2], input[3], parseFloat(input[4]), moment(input[0], "DD-MM-YYYY"), index);
-    people[input[1]].addTransaction(newTrans);
-    people[input[2]].addTransaction(newTrans);
-})
-
-for (const [key, value] of Object.entries(people)) {
-    value.printTransactions();
-}
 
 input = ""
 while (!input.match("exit")) {
     input = readlineSync.question("Please input an action:\n");
 
-    if (input.toLowerCase().match("list all")) {
+    if (input.toLowerCase().indexOf("list all") != -1) {
         ListAll();
-    }
-
-    if (input.indexOf("List ") != -1) {
+    } else if (input.toLowerCase().indexOf("list everything") != -1) {
+        ListAllWithTransactions();
+    } else if (input.indexOf("List ") != -1) {
         if (input.replace("List ", "") in people) {
-            people[input.replace("List ", "")].printTransactions();
+            people[input.replace("List ", "")].PrintTransactions();
         }
+    } else if (input.indexOf("Import File ") != -1) {
+
+        name = input.replace("Import File ", "");
+
+        if (!fs.existsSync("./" + name)) {
+            console.log("Could not open file: " + name);
+            return;
+        }
+    
+        text = fs.readFileSync("./" + name, "utf8");    
+
+        if (input.indexOf(".csv") != -1) {
+            ParseCSV(text);
+        } else if (input.indexOf(".json") != -1) {
+            ParseJSON(text);
+        } else if (input.indexOf(".xml") != -1) {
+            ParseXML(text);        
+        }
+        else {
+            console.log("File type not supported");
+        }
+
+        console.log("Successfully imported: " + name);
+
+    } else if (input.indexOf("Export File ") != -1) {
+        name = input.replace("Export File ", "");
+
+        output = "Date,From,To,Narrative,Amount\n";
+
+        for (const [key, value] of Object.entries(people)) {
+            output += value.getTransactionCSVString();
+        }    
+
+        console.log(output);
+        
+        fs.writeFileSync(name, output, function(err) {
+            if(err) {
+                return console.log(err);
+            }
+        
+            console.log("Successfully Written to File: " + name);   
+        }); 
+
+    } else if (!input.match("exit")) {
+        console.log("Could not Interprete your Input");
     }
 }
