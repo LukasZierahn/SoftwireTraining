@@ -129,16 +129,11 @@ text.split("\n").forEach((line, index) => {
     people[input[2]].addTransaction(newTrans);
 })
 
-ListAll();
-for (const [key, value] of Object.entries(people)) {
-    value.printTransactions();
-}
-
 input = ""
 while (!input.match("exit")) {
-    input = readlineSync.question("Please input an actoin");
+    input = readlineSync.question("Please input an action:\n");
 
-    if (input.lowercase().match("list all")) {
+    if (input.toLowerCase().match("list all")) {
         ListAll();
     }
 
