@@ -1,9 +1,8 @@
 const { Helper, myMove, opponentMove } = require("./Helper");
-const { logger } = require("./logger");
 
 class BotAnalyser {
 
-    static lookBackDistance = 20;
+    static lookBackDistance = 30;
     constructor(bot, botname) {
         this.bot = bot;
         this.botname = botname;
@@ -64,11 +63,23 @@ class BotAnalyser {
             lookBackPoints += value;
         }
 
-        return this.lookBack.length == 0 ? 0 : lookBackPoints / this.lookBack.length;
+        let accuratePercent = this.lookBack.length == 0 ? 0 : lookBackPoints / this.lookBack.length;
+
+        let dynamitesUsed = Helper.countDynamites(this.suggestedMoves.slice(Math.max(0, this.suggestedMoves.length - 1 - this.lookBack.length), this.suggestedMoves.length - 1));
+
+        return dynamitesUsed == 0 ? accuratePercent : accuratePercent * Math.min(1, (1 - (dynamitesUsed / this.lookBack.length)));
     }
     
     getDebugString() {
         return `${this.botname}: ${this.getPointPercent()} (${this.wins}/${this.draws}/${this.losses}), ${this.currentMove}, ${this.uses}`;
+    }
+
+    getCSVHeader() {
+        return `${this.botname}: points the last ${BotAnalyser.lookBackDistance} moves,wins,draws,losses,currentMove,uses`;
+    }
+
+    getCSVString() {
+        return `${this.getPointPercent()},${this.wins},${this.draws},${this.losses},${this.currentMove},${this.uses}`;
     }
 }
 exports.BotAnalyser = BotAnalyser;

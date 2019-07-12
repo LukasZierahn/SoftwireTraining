@@ -3,7 +3,7 @@ const { logger } = require("./logger");
 
 class DrawPredictor {
 
-    constructor(mainBot, totalWeighting) {
+    constructor(mainBot, totalWeighting, dynamiteretention, waterbombsOffset) {
         this.mainBot = mainBot;
         this.dynamiteUsed = [];
         this.waterUsed = [];
@@ -13,6 +13,8 @@ class DrawPredictor {
         this.classicUsedTotal = 0;
         this.stakesLastMove = 1;
         this.totalWeighting = totalWeighting;
+        this.dynamiteretention = dynamiteretention;
+        this.waterbombsOffset = waterbombsOffset;
     }
 
     makeMove(gamestate, stake) {
@@ -85,14 +87,15 @@ class DrawPredictor {
         this.stakesLastMove = stake;
 
         let lookbackWeighting = 1 - this.totalWeighting;
-        logger.info(`DrawPredictor Predictions: dyn: ${Math.min(((lookbackWeighting * classicPercent) + (this.totalWeighting * classicPercentTotal)) * (this.mainBot.dynamitesLeft / 100) * stake, 0.85)}/${dynamitePercent}/${dynamitePercentTotal}, water: ${((lookbackWeighting * dynamitePercent) + (this.totalWeighting * dynamitePercentTotal)) && this.mainBot.opponentsDynamitesLeft != 0}/${waterPercent}/${waterPercentTotal}, classic: ${classicPercent}/${classicPercentTotal}`);
+        let dynamiteChance = Math.min(((lookbackWeighting * classicPercent) + (this.totalWeighting * classicPercentTotal)) * (this.mainBot.dynamitesLeft / 100.0) * stake * this.dynamiteretention, 100 - (90 * (1 / stake)));
+        logger.info(`DrawPredictor Predictions: dyn: ${dynamiteChance}/${dynamitePercent}/${dynamitePercentTotal}, water: ${((lookbackWeighting * dynamitePercent) + (this.totalWeighting * dynamitePercentTotal)) && this.mainBot.opponentsDynamitesLeft != 0}/${waterPercent}/${waterPercentTotal}, classic: ${classicPercent}/${classicPercentTotal}`);
 
-        if (randomNumber < Math.min(((lookbackWeighting * classicPercent) + (this.totalWeighting * classicPercentTotal)) * (this.mainBot.dynamitesLeft / 100) * stake, 0.85)) {
+        if (randomNumber < dynamiteChance) {
             return "D";
         }
 
         randomNumber = Math.random();
-        if (randomNumber < ((lookbackWeighting * dynamitePercent) + (this.totalWeighting * dynamitePercentTotal)) && this.mainBot.opponentsDynamitesLeft != 0) {
+        if (randomNumber < ((lookbackWeighting * dynamitePercent) + (this.totalWeighting * dynamitePercentTotal) * (this.mainBot.opponentsDynamitesLeft / 100.0) * this.waterbombsOffset) && this.mainBot.opponentsDynamitesLeft != 0) {
             return "W";
         }
 

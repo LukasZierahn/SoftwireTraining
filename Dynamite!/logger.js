@@ -5,7 +5,7 @@ log4js.configure({
         file: { type: 'fileSync', filename: 'logs/debug.log' }
     },
     categories: {
-        default: { appenders: ['file'], level: 'trace' }
+        default: { appenders: ['file'], level: 'error' }
     }
 });
 

@@ -1,20 +1,32 @@
-// const myMove = "myMove";
-const myMove = "p1";
+const myMove = "myMove";
+// const myMove = "p1";
 exports.myMove = myMove;
 
-// const opponentMove = "opponentMove";
-const opponentMove = "p2";
+const opponentMove = "opponentMove";
+// const opponentMove = "p2";
 exports.opponentMove = opponentMove;
 
 
 
 class Helper {
+    static countDynamites(array) {
+        let dynamiteCount = 0;
+
+        for (let move of array) {
+            if (move == 'D') {
+                dynamiteCount++;
+            }
+        }
+
+        return dynamiteCount;
+    }
+
     static simulateGame(myMove, opponentMove) {
         if (myMove == opponentMove) {
             return "d";
         }
         if (myMove == "R") {
-            if (opponentMove == "P") {
+            if (opponentMove == "P" || opponentMove == "D") {
                 return "l";
             }
             else if (opponentMove == "S" || opponentMove == "W") {
@@ -22,7 +34,7 @@ class Helper {
             }
         }
         if (myMove == "P") {
-            if (opponentMove == "S") {
+            if (opponentMove == "S" || opponentMove == "D") {
                 return "l";
             }
             else if (opponentMove == "R" || opponentMove == "W") {
@@ -30,7 +42,7 @@ class Helper {
             }
         }
         if (myMove == "S") {
-            if (opponentMove == "R") {
+            if (opponentMove == "R" || opponentMove == "D") {
                 return "l";
             }
             else if (opponentMove == "P" || opponentMove == "W") {
