@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "log4js": "^4.3.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "readline-sync": "^1.4.9",
     "xml2js": "^0.4.19"
   }
